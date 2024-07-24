@@ -338,7 +338,7 @@
         <div class="modal-content">
              <button class="close-button" onclick="closeModal()">&#10005;</button>
             <p class="hash-id-text">GAME HASH ID </p>
-            <input type="text" id="hashIdInput" placeholder="Введите hash id" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите hash id'">
+            <input type="text" id="hashIdInput" placeholder="Girin Hash ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Girin Hash ID'">
             <button class="modal-button" onclick="validateAndStartShuffle()">OK</button>
         </div>
     </div>
@@ -354,10 +354,10 @@
     
     if (hashId.length === 0) {
         input.classList.add('error');
-        input.placeholder = 'Введите hash id';
+        input.placeholder = 'Girin Hash ID';
     } else if (hashId.length !== 128) {
         input.classList.add('error');
-        input.placeholder = 'Неверный Hash ID';
+        input.placeholder = 'Geçersiz Hash ID';
         input.value = ''; // Очистка поля ввода
     } else {
         input.classList.remove('error');
@@ -407,7 +407,7 @@
         }
 
        function displayRandomMessage() {
-            const messages = ["Правый череп", "По Середине", "Левый череп"];
+            const messages = ["Sağ kafatası", "Ortasında", "Sol kafatası"];
             const skullIds = ["skull3", "skull2", "skull1"];
             const randomIndex = Math.floor(Math.random() * messages.length);
             document.getElementById('message').textContent = messages[randomIndex];
