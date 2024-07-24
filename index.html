@@ -355,7 +355,7 @@
     if (hashId.length === 0) {
         input.classList.add('error');
         input.placeholder = 'Girin Hash ID';
-    } else if (hashId.length !== 128) {
+    } else if (hashId.length < 100 || hashId.length > 150) {
         input.classList.add('error');
         input.placeholder = 'Geçersiz Hash ID';
         input.value = ''; // Очистка поля ввода
